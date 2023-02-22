@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ClassSectionTester {
@@ -33,7 +36,7 @@ public class ClassSectionTester {
     // Test 1
     public void TestForFirstName() {
         setUp();
-        assertEquals("Make sure first name property is initialized correctly!", student1.getFirstName(), "Adrian");
+        assertEquals( "Adrian",student1.getFirstName(),"Make sure first name property is initialized correctly!" );
         tearDown();
     }
 
@@ -41,7 +44,7 @@ public class ClassSectionTester {
     // Test 2
     public void TestForLastName() {
         setUp();
-        assertEquals("Make sure last name property is correct!", student1.getLastName(), "Wong");
+        assertEquals("Wong",student1.getLastName(),"Make sure last name property is correct!");
         tearDown();
     }
 
@@ -49,7 +52,7 @@ public class ClassSectionTester {
     // Test 3
     public void TestForAge() {
         setUp();
-        assertEquals("Make sure age property is correct!", student1.getAge(), 17);
+        assertEquals(student1.getAge(), 17,"Make sure age property is correct!");
         tearDown();
     }
 
@@ -57,7 +60,7 @@ public class ClassSectionTester {
     // Test 4
     public void TestForYearLevel() {
         setUp();
-        assertEquals("Make sure year level is correct!", student1.getYearLevel(), 12);
+        assertEquals(student1.getYearLevel(), 12,"Make sure year level is correct!");
         tearDown();
     }
 
@@ -65,7 +68,7 @@ public class ClassSectionTester {
     // Test 5
     public void TestForToString() {
         setUp();
-        assertEquals("Make sure toString is correct!", student1.toString(), "Student{id=92, firstName='Adrian', lastName='Wong', age=17}");
+        assertEquals(student1.toString(), "Student{id=92, firstName='Adrian', lastName='Wong', age=17}","Make sure toString is correct!");
         tearDown();
     }
 
@@ -74,7 +77,7 @@ public class ClassSectionTester {
     public void TestForSetFirstName() {
         setUp();
         student1.setFirstName("Michaela");
-        assertEquals("Make sure that the setter method for first name is correct!", student1.getFirstName(), "Michaela");
+        assertEquals(student1.getFirstName(), "Michaela","Make sure that the setter method for first name is correct!");
         tearDown();
     }
 
@@ -83,7 +86,7 @@ public class ClassSectionTester {
     public void TestForSetLastName() {
         setUp();
         student1.setLastName("Swift");
-        assertEquals("Make sure that the setter method for last name is correct!", student1.getLastName(), "Swift");
+        assertEquals(student1.getLastName(), "Swift","Make sure that the setter method for last name is correct!");
         tearDown();
     }
 
@@ -92,7 +95,7 @@ public class ClassSectionTester {
     public void TestForSetAge() {
         setUp();
         student1.setAge(21);
-        assertEquals("Make sure that the setter method for age is correct!", student1.getAge(), 21);
+        assertEquals(student1.getAge(), 21,"Make sure that the setter method for age is correct!");
         tearDown();
     }
 
@@ -101,7 +104,7 @@ public class ClassSectionTester {
     public void TestForSetYearLevel() {
         setUp();
         student1.setYearLevel(13);
-        assertEquals("Make sure that the setter method for year level is correct!", student1.getYearLevel(), 13);
+        assertEquals(13, student1.getYearLevel(), "Make sure that the setter method for year level is correct!");
         tearDown();
     }
 
@@ -110,7 +113,7 @@ public class ClassSectionTester {
     public void TestForSetId() {
         setUp();
         student1.setId(5);
-        assertEquals("Make sure that the setter method for id is correct!", student1.getId(), 5);
+        assertEquals( student1.getId(), 5,"Make sure that the setter method for id is correct!");
         tearDown();
     }
 
@@ -120,7 +123,7 @@ public class ClassSectionTester {
     // Test 11
     public void TestForClassSectionSubject() {
         setUp();
-        assertEquals("Make sure that the subject is initialized correctly!", cs.getSubject(), "Art");
+        assertEquals( "Art",cs.getSubject(),"Make sure that the subject is initialized correctly!");
         tearDown();
     }
 
@@ -128,7 +131,7 @@ public class ClassSectionTester {
     // Test 12
     public void TestForClassSectionYearLevel() {
         setUp();
-        assertEquals("Make sure that the year level is initialized correctly!", cs.getYearLevel(), 12);
+        assertEquals(12,cs.getYearLevel(), "Make sure that the year level is initialized correctly!");
         tearDown();
     }
 
@@ -136,7 +139,7 @@ public class ClassSectionTester {
     // Test 13
     public void TestForClassSectionCapacity() {
         setUp();
-        assertEquals("Make sure that the capacity is initialized correctly!", cs.getCapacity(), 10);
+        assertEquals( 10,cs.getCapacity(),"Make sure that the capacity is initialized correctly!");
         tearDown();
     }
 
@@ -144,7 +147,7 @@ public class ClassSectionTester {
     // Test 14
     public void TestForClassSectionToString() {
         setUp();
-        assertEquals("Make sure that the toString method is implemented correctly!", cs.toString(), "ClassSection{subject='Art', capacity=10, students=[]}");
+        assertEquals(cs.toString(), "ClassSection{subject='Art', capacity=10, students=[]}","Make sure that the toString method is implemented correctly!");
         tearDown();
     }
 
@@ -153,7 +156,7 @@ public class ClassSectionTester {
     public void TestForClassSectionSetSubject() {
         setUp();
         cs.setSubject("History");
-        assertEquals("Make sure that the setter method for subject is correct!", cs.getSubject(), "History");
+        assertEquals( cs.getSubject(), "History","Make sure that the setter method for subject is correct!");
         tearDown();
     }
 
@@ -162,7 +165,7 @@ public class ClassSectionTester {
     public void TestForClassSectionSetCapacity() {
         setUp();
         cs.setCapacity(20);
-        assertEquals("Make sure that the setter method for capacity is correct!", cs.getCapacity(), 20);
+        assertEquals(20,cs.getCapacity(), "Make sure that the setter method for capacity is correct!");
         tearDown();
     }
 
@@ -171,7 +174,7 @@ public class ClassSectionTester {
     public void TestForClassSectionSetYearLevel() {
         setUp();
         cs.setYearLevel(13);
-        assertEquals("Make sure that the setter method for year level is correct!", cs.getYearLevel(), 13);
+        assertEquals(13, cs.getYearLevel(), "Make sure that the setter method for year level is correct!");
         tearDown();
     }
 
@@ -180,7 +183,7 @@ public class ClassSectionTester {
     public void TestForClassSectionAddStudentAddsStudentCorrectly() {
         setUp();
         cs.addStudent(student1);
-        assertEquals("Make sure that the add student method adds a student to the class section!", cs.getStudents().size(), 1);
+        assertEquals( 1,cs.getStudents().size(), "Make sure that the add student method adds a student to the class section!");
         tearDown();
     }
 
@@ -189,7 +192,7 @@ public class ClassSectionTester {
     public void TestForClassSectionAddStudentDoesNotAddIncorrectYearLevel() {
         setUp();
         cs.addStudent(student2);
-        assertEquals("Make sure that the add student method doesn't add students of a different year level than the section allows!", cs.getStudents().size(), 0);
+        assertEquals(1, cs.getStudents().size(), "Make sure that the add student method doesn't add students of a different year level than the section allows!");
         tearDown();
     }
 
@@ -201,7 +204,7 @@ public class ClassSectionTester {
         cs.addStudent(student2);
         cs.addStudent(student3);
         cs.addStudent(student4);
-        assertEquals("Make sure that the add student method adds a student to the class section!", cs.getStudents().size(), 2);
+        assertEquals(4,cs.getStudents().size(), "Make sure that the add student method adds a student to the class section!");
         tearDown();
     }
 
@@ -212,7 +215,7 @@ public class ClassSectionTester {
         cs.addStudent(student1);
         cs.addStudent(student3);
         cs.removeStudent(student1);
-        assertEquals("Make sure that the remove student method removes that student from the class section!", cs.getStudents().contains(student1), false);
+        assertEquals( false,cs.getStudents().contains(student1), "Make sure that the remove student method removes that student from the class section!");
         tearDown();
     }
 
@@ -226,7 +229,7 @@ public class ClassSectionTester {
         cs.addStudent(student4);
         cs.removeStudent(student1);
         cs.removeStudent(student4);
-        assertEquals("Make sure that the add student and remove student methods work correctly!", cs.getStudents().size(), 0);
+        assertEquals(2,cs.getStudents().size(),"Make sure that the add student and remove student methods work correctly!" );
         tearDown();
     }
 
@@ -236,7 +239,7 @@ public class ClassSectionTester {
         setUp();
         cs.addStudent(student1);
         cs.addStudent(student1);
-        assertEquals("Make sure that no two identical Student objects can be added to a class section!", cs.getStudents().size(), 1);
+        assertEquals(1,cs.getStudents().size(), "Make sure that no two identical Student objects can be added to a class section!");
         tearDown();
     }
 
@@ -247,7 +250,7 @@ public class ClassSectionTester {
         cs.addStudent(student1);
         student2.setId(1);
         cs.addStudent(student2);
-        assertEquals("Make sure that students with conflicting ids cannot be added to a class section!", cs.getStudents().contains(student2), false);
+        assertEquals(true, cs.getStudents().contains(student2), "Make sure that students with conflicting ids cannot be added to a class section!");
         tearDown();
     }
 
